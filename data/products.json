@@ -1,82 +1,618 @@
 [
   {
     "id": 1,
-    "name": "Elegant Gold Necklace",
-    "image": "images/necklace1.jpg",
-    "price": 150,
+    "name": "Snake Chain",
+    "price": 200,
     "category": "Necklaces",
-    "description": "An elegant gold-plated necklace with a delicate design.",
+    "description": "An elegant 18k gold-plated Necklace with a delicate design.",
     "trending": true,
-    "bestSeller": false
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/1.jpg"]
+      }
+    ]
   },
   {
     "id": 2,
-    "name": "Silver Heart Necklace",
-    "image": "images/necklace2.jpg",
-    "price": 120,
-    "category": "Necklaces",
-    "description": "A silver necklace featuring a heart-shaped pendant.",
-    "trending": false,
-    "bestSeller": true
+    "name": "Bow Ring",
+    "price": 200,
+    "category": "Rings",
+    "description": "18k gold plated ring (adjustable size)",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/2.jpg"]
+      }
+    ]
   },
   {
     "id": 3,
-    "name": "Pearl Strand Necklace",
-    "image": "images/necklace3.jpg",
+    "name": "Amour Necklace",
     "price": 200,
     "category": "Necklaces",
-    "description": "A classic pearl strand necklace for an elegant look.",
-    "trending": false,
-    "bestSeller": false
+    "description": "18k gold plated necklace",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/3.jpg"]
+      }
+    ]
   },
   {
     "id": 4,
-    "name": "Diamond Cut Ring",
-    "image": "images/ring1.jpg",
-    "price": 300,
-    "category": "Rings",
-    "description": "A ring with a diamond-cut pattern that sparkles brilliantly.",
+    "name": "Amour Earring",
+    "price": 190,
+    "category": "Earrings",
+    "description": "18k gold plated earring",
     "trending": true,
-    "bestSeller": true
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/4.jpg"]
+      }
+    ]
   },
   {
     "id": 5,
-    "name": "Ruby Stone Ring",
-    "image": "images/ring2.jpg",
-    "price": 250,
-    "category": "Rings",
-    "description": "A ring adorned with a vibrant ruby gemstone.",
-    "trending": false,
-    "bestSeller": false
+    "name": "Vintage Flower Necklace",
+    "price": 220,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/5.jpg"]
+      }
+    ]
   },
   {
     "id": 6,
-    "name": "Opal Gold Ring",
-    "image": "images/ring3.jpg",
-    "price": 180,
-    "category": "Rings",
-    "description": "A gold ring featuring a shimmering opal stone.",
-    "trending": false,
-    "bestSeller": false
+    "name": "Twin Heart Necklace",
+    "price": 190,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/6.jpg"]
+      }
+    ]
   },
   {
     "id": 7,
-    "name": "Charm Bracelet",
-    "image": "images/bracelet1.jpg",
-    "price": 75,
-    "category": "Bracelets",
-    "description": "A bracelet with multiple charms and a secure clasp.",
-    "trending": false,
-    "bestSeller": true
+    "name": "One Love Necklace",
+    "price": 210,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/7.jpg"]
+      }
+    ]
   },
   {
     "id": 8,
-    "name": "Beaded Bracelet",
-    "image": "images/bracelet2.jpg",
-    "price": 60,
+    "name": "Luxe Green Emerald Bracelet",
+    "price": 220,
     "category": "Bracelets",
-    "description": "A handcrafted bracelet made of colorful beads.",
+    "description": "An elegant 18k gold-plated bracelet with a delicate design.",
+    "trending": false,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/8.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Drop Earrings",
+    "price": 150,
+    "category": "Earrings",
+    "description": "Gold plated and plated drop earring",
     "trending": true,
-    "bestSeller": false
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/9a.jpg"]
+      },
+      {
+        "color": "Silver",
+        "images": ["images/9b.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Puff Heart Necklace",
+    "price": 210,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/10.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Vintage Necklace",
+    "price": 200,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/11.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Fairy Bow Earrings",
+    "price": 200,
+    "category": "Earrings",
+    "description": "18k gold plated",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/12.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Bow-Heart Themed Earrings",
+    "price": 220,
+    "category": "Earrings",
+    "description": "18k gold plated heart-bow themed earrings",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/13.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Crystine Heart Necklace",
+    "price": 200,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/14.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Tiny Heart Necklace",
+    "price": 200,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/15.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "11:11 Necklace",
+    "price": 200,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/16.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Toi et Moi Ring",
+    "price": 250,
+    "category": "Rings",
+    "description": "18k gold plated ring (adjustable size)",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Silver",
+        "images": ["images/17.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Goldie Luxe Ring",
+    "price": 200,
+    "category": "Rings",
+    "description": "18k gold plated ring (adjustable size)",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/18.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Plain Nail Cartier",
+    "price": 200,
+    "category": "Bracelets",
+    "description": "An elegant 18k gold-plated bracelet with a delicate design.",
+    "trending": false,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/19.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Pearl Hoops",
+    "price": 100,
+    "category": "Earrings",
+    "description": "Statement Pearl hoops",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/20.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Statement Office Hoops",
+    "price": 100,
+    "category": "Earrings",
+    "description": "Gold plated and silver plated earring",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/21a.jpg"]
+      },
+      {
+        "color": "Silver",
+        "images": ["images/21b.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Chunky Three Layer Hoops",
+    "price": 100,
+    "category": "Earrings",
+    "description": "Gold plated and silver plated earring",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Silver",
+        "images": ["images/22.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Angeline Necklace",
+    "price": 200,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/23.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Luxe Green Emerald Chain Earring",
+    "price": 250,
+    "category": "Earrings",
+    "description": "18k gold plated",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/24.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Heart Cartier",
+    "price": 250,
+    "category": "Bracelets",
+    "description": "An elegant 18k gold-plated bracelet with a delicate design.",
+    "trending": false,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/25.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Chunky Chain Bracelet",
+    "price": 200,
+    "category": "Bracelets",
+    "description": "An elegant 18k gold-plated bracelet with a delicate design.",
+    "trending": false,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/26.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Crystilla Bow Ring",
+    "price": 60,
+    "category": "Rings",
+    "description": "Plated rings (adjustable size)",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/27.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Princess Necklace",
+    "price": 200,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/28.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Teddy Keychain Matte Lipsticks",
+    "price": 70,
+    "category": "Makeup",
+    "description": "Cutest teddy keychain lipstick.",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Mauve",
+        "images": ["images/29.jpg"]
+      },
+      {
+        "color": "Secret",
+        "images": ["images/29.jpg"]
+      },
+      {
+        "color": "Lovie",
+        "images": ["images/29.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Amour Chain Bracelet",
+    "price": 220,
+    "category": "Bracelets",
+    "description": "An elegant 18k gold-plated bracelet with a delicate design.",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/30.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Bow-lý Necklace",
+    "price": 200,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/31.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Love Heart Necklace",
+    "price": 200,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/32.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Pretty Butterfly Earrings",
+    "price": 70,
+    "category": "Earrings",
+    "description": "Butterfly charm earrings",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/33.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Full of Charms Necklace",
+    "price": 250,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/34.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Statement Cube Earrings",
+    "price": 70,
+    "category": "Earrings",
+    "description": "Cube earrings",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/35.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Gold Round Hoops",
+    "price": 70,
+    "category": "Earrings",
+    "description": "Round hoops",
+    "trending": true,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/36.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Diamond Studded Nail Cartier",
+    "price": 290,
+    "category": "Bracelets",
+    "description": "An elegant silver plated bracelet with a delicate design.",
+    "trending": false,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Silver",
+        "images": ["images/37.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Angeline Bracelet",
+    "price": 200,
+    "category": "Bracelets",
+    "description": "An elegant 18k gold-plated bracelet with a delicate design.",
+    "trending": false,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/38.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Luxe Green Emerald Necklace",
+    "price": 250,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/39.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Bow-lý Combo Ring and Necklace",
+    "price": 390,
+    "category": "Necklaces",
+    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/40.jpg"]
+      }
+    ]
   }
 ]

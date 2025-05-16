@@ -7,10 +7,25 @@
   <link rel="stylesheet" href="css/style.css"/>
   <style>
     .product-detail { max-width: 800px; margin: 2rem auto; }
-    .detail-images { display: flex; gap: 1rem; overflow-x: auto; margin-bottom: 1rem; }
-    .detail-images img { width: 200px; object-fit: cover; border: 1px solid #ddd; border-radius: 4px; }
-    .detail-info { padding: 1rem; background: #fff; border: 1px solid #ddd; border-radius: 4px; }
-    .detail-info h1 { margin-top: 0; }
+    .variants { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+    .variant-btn {
+      padding: 0.4rem 0.8rem;
+      border: 1px solid #333;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .variant-btn.active { background: #333; color: #fff; }
+    .gallery {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    .gallery img {
+      width: 200px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
     .back-btn { margin-bottom: 1rem; }
   </style>
 </head>
@@ -27,20 +42,27 @@
 
   <div id="app" class="product-detail">
     <button class="btn back-btn" @click="goBack()">← Back</button>
-
-    <div v-if="!product">
-      <p>Loading product…</p>
-    </div>
+    <div v-if="!product"><p>Loading…</p></div>
     <div v-else>
-      <div class="detail-images">
-        <img v-for="img in product.images" :key="img" :src="img" :alt="product.name"/>
+      <h1>{{ product.name }}</h1>
+      <p class="price"><strong>₹{{ product.price }}</strong></p>
+      <p>{{ product.description }}</p>
+
+      <div class="variants">
+        <div v-for="v in product.variants"
+             :key="v.color"
+             class="variant-btn"
+             :class="{ active: selectedVariant === v }"
+             @click="selectVariant(v)">
+          {{ v.color }}
+        </div>
       </div>
-      <div class="detail-info">
-        <h1>{{ product.name }}</h1>
-        <p class="price"><strong>₹{{ product.price }}</strong></p>
-        <p>{{ product.description }}</p>
-        <button class="btn" @click="addToBag()">Add to Bag</button>
+
+      <div class="gallery">
+        <img v-for="img in images" :key="img" :src="img" :alt="product.name"/>
       </div>
+
+      <button class="btn" @click="addToBag()">Add to Bag</button>
     </div>
   </div>
 

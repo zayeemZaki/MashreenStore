@@ -1,10 +1,15 @@
-/* js/product.js */
 const productApp = Vue.createApp({
   data() {
     return {
       product: null,
+      selectedVariant: null,
       cart: []
     };
+  },
+  computed: {
+    images() {
+      return this.selectedVariant ? this.selectedVariant.images : [];
+    }
   },
   methods: {
     goBack() {
@@ -17,22 +22,24 @@ const productApp = Vue.createApp({
       localStorage.setItem("cart", JSON.stringify(this.cart));
     },
     addToBag() {
-      const existing = this.cart.find(i => i.id === this.product.id);
-      if (existing) existing.quantity++;
+      const ex = this.cart.find(i => i.id === this.product.id);
+      if (ex) ex.quantity++;
       else this.cart.push({ id: this.product.id, quantity: 1 });
       this.saveCart();
       alert("Added to your bag!");
     },
+    selectVariant(v) {
+      this.selectedVariant = v;
+    },
     fetchProduct() {
       const params = new URLSearchParams(window.location.search);
-      const id = parseInt(params.get("id"));
-      if (!id) return;
+      const id = Number(params.get("id"));
       fetch("data/products.json")
         .then(r => r.json())
         .then(data => {
-          this.product = data.find(p => p.id === id) || null;
-        })
-        .catch(err => console.error("Failed to load product data:", err));
+          this.product = data.find(p => p.id === id);
+          this.selectedVariant = this.product.variants[0];
+        });
     }
   },
   mounted() {

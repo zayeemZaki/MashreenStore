@@ -1,4 +1,3 @@
-/* js/index.js */
 const app = Vue.createApp({
   data() {
     return {
@@ -13,16 +12,16 @@ const app = Vue.createApp({
     };
   },
   computed: {
+    categoriesToShow() {
+      return ["Rings", "Necklaces", "Earrings"];
+    },
     filteredProducts() {
       if (this.trendingMode) return this.trendingProducts;
       let list = this.products;
-      if (this.selectedCategory !== "All") {
-        // support bestSeller filter
-        if (this.selectedCategory.includes("bestSeller")) {
-          list = this.bestSellerProducts;
-        } else {
-          list = list.filter(p => p.category === this.selectedCategory);
-        }
+      if (this.selectedCategory.includes("bestSeller")) {
+        list = this.bestSellerProducts;
+      } else if (this.selectedCategory !== "All") {
+        list = list.filter(p => p.category === this.selectedCategory);
       }
       if (this.searchTerm.trim()) {
         const t = this.searchTerm.toLowerCase();
@@ -48,7 +47,6 @@ const app = Vue.createApp({
       localStorage.setItem("cart", JSON.stringify(this.cart));
     },
     goToCategoryPage(cat) {
-      // handle bestSeller special case
       if (cat.includes("bestSeller")) {
         window.location.href = "index.html?filter=bestSeller";
       } else {
@@ -57,11 +55,14 @@ const app = Vue.createApp({
     },
     goToTrendingPage() {
       window.location.href = "index.html?trending=true";
+    },
+    goToProduct(id) {
+      window.location.href = `product.html?id=${encodeURIComponent(id)}`;
     }
   },
   mounted() {
-    const c = localStorage.getItem("cart");
-    if (c) this.cart = JSON.parse(c);
+    const stored = localStorage.getItem("cart");
+    if (stored) this.cart = JSON.parse(stored);
 
     fetch("data/products.json")
       .then(r => r.json())
