@@ -11,69 +11,68 @@
     rel="stylesheet"
   />
 
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <!-- MOUNT POINT for Vue -->
   <div id="app">
-    <!-- Simplified Product-page Header (now inside #app) -->
+    <!-- HEADER -->
     <header class="site-header product-header">
       <a href="index.html" class="logo-link">
-        <img src="images/logo.png" alt="Mashreen’s Shop Logo" class="logo"/>
+        <img src="images/logo.png" alt="Logo" class="logo"/>
       </a>
       <a href="bag.html" class="btn-icon bag-icon">
         <img src="images/bag-icon.png" alt="Bag"/>
-        <!-- badge shows count now that Vue is mounted here -->
         <span class="badge">{{ cartCount }}</span>
       </a>
     </header>
 
-    <!-- PRODUCT DETAIL -->
-    <div class="product-detail">
-      <div v-if="!product" class="loading-text">Loading…</div>
+    <!-- LOADING STATE -->
+    <div v-if="!product" class="loading-text">Loading…</div>
 
-      <div v-else class="detail-container">
-        <h1 class="detail-title">{{ product.name }}</h1>
-        <p class="price">₹{{ product.price }}</p>
-        <p class="description">{{ product.description }}</p>
-
-        <!-- Variant Pills -->
+    <!-- TWO-COLUMN DETAIL LAYOUT -->
+    <div v-else class="product-detail detail--flex">
+      <!-- LEFT: IMAGE + COLOR PILLS -->
+      <div class="left-panel">
+        <div class="main-image skeleton">
+          <img
+            :src="selectedVariant.images[0]"
+            :alt="product.name"
+            @load="$event.target.parentNode.classList.remove('skeleton')"
+          />
+        </div>
         <div class="variants">
           <button
             v-for="v in product.variants"
             :key="v.color"
-            class="variant-btn"
+            class="variant-pill"
             :class="{ active: selectedVariant === v }"
+            :style="{
+              backgroundColor: v.color.toLowerCase(),
+              color: v.color.toLowerCase()==='gold'? '#000':'#fff'
+            }"
             @click="selectVariant(v)"
           >
             {{ v.color }}
           </button>
         </div>
+      </div>
 
-        <!-- Scroll-snap Gallery -->
-        <div class="gallery">
-          <div
-            v-for="img in images"
-            :key="img"
-            class="gallery-card skeleton"
-          >
-            <img
-              :src="img"
-              :alt="product.name"
-              @load="$event.target.parentNode.classList.remove('skeleton')"
-            />
-          </div>
-        </div>
-
+      <!-- RIGHT: DETAILS -->
+      <div class="right-panel">
+        <h1 class="detail-title">{{ product.name }}</h1>
+        <p class="price">₹{{ product.price }}</p>
+        <p class="description">{{ product.description }}</p>
         <button class="btn add-btn" @click="addToBag()">Add to Bag</button>
       </div>
     </div>
 
-    <!-- Floating Contact -->
+    <!-- FLOATING CONTACT ICON -->
     <a href="#contact" class="btn-icon contact-icon-floating">
       <img src="images/contact.png" alt="Contact"/>
     </a>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       Developed by
       <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">
@@ -82,7 +81,7 @@
     </footer>
   </div>
 
-  <!-- Vue + script -->
+  <!-- Vue + Script -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="js/product.js"></script>
 </body>
