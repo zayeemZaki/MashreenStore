@@ -4,72 +4,85 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Product Details – Mashreen’s Shop</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="css/style.css"/>
-  <style>
-    .product-detail { max-width: 800px; margin: 2rem auto; }
-    .variants { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
-    .variant-btn {
-      padding: 0.4rem 0.8rem;
-      border: 1px solid #333;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .variant-btn.active { background: #333; color: #fff; }
-    .gallery {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      margin-bottom: 1rem;
-    }
-    .gallery img {
-      width: 200px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
-    .back-btn { margin-bottom: 1rem; }
-  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-left">
-      <a href="index.html" class="brand">Mashreen’s Shop</a>
-    </div>
-    <div class="header-right">
-      <a href="bag.html" class="btn">Bag</a>
-      <a href="#contact" class="btn">Contact</a>
-    </div>
-  </header>
+  <!-- MOUNT POINT for Vue -->
+  <div id="app">
+    <!-- Simplified Product-page Header (now inside #app) -->
+    <header class="site-header product-header">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Mashreen’s Shop Logo" class="logo"/>
+      </a>
+      <a href="bag.html" class="btn-icon bag-icon">
+        <img src="images/bag-icon.png" alt="Bag"/>
+        <!-- badge shows count now that Vue is mounted here -->
+        <span class="badge">{{ cartCount }}</span>
+      </a>
+    </header>
 
-  <div id="app" class="product-detail">
-    <button class="btn back-btn" @click="goBack()">← Back</button>
-    <div v-if="!product"><p>Loading…</p></div>
-    <div v-else>
-      <h1>{{ product.name }}</h1>
-      <p class="price"><strong>₹{{ product.price }}</strong></p>
-      <p>{{ product.description }}</p>
+    <!-- PRODUCT DETAIL -->
+    <div class="product-detail">
+      <div v-if="!product" class="loading-text">Loading…</div>
 
-      <div class="variants">
-        <div v-for="v in product.variants"
-             :key="v.color"
-             class="variant-btn"
-             :class="{ active: selectedVariant === v }"
-             @click="selectVariant(v)">
-          {{ v.color }}
+      <div v-else class="detail-container">
+        <h1 class="detail-title">{{ product.name }}</h1>
+        <p class="price">₹{{ product.price }}</p>
+        <p class="description">{{ product.description }}</p>
+
+        <!-- Variant Pills -->
+        <div class="variants">
+          <button
+            v-for="v in product.variants"
+            :key="v.color"
+            class="variant-btn"
+            :class="{ active: selectedVariant === v }"
+            @click="selectVariant(v)"
+          >
+            {{ v.color }}
+          </button>
         </div>
-      </div>
 
-      <div class="gallery">
-        <img v-for="img in images" :key="img" :src="img" :alt="product.name"/>
-      </div>
+        <!-- Scroll-snap Gallery -->
+        <div class="gallery">
+          <div
+            v-for="img in images"
+            :key="img"
+            class="gallery-card skeleton"
+          >
+            <img
+              :src="img"
+              :alt="product.name"
+              @load="$event.target.parentNode.classList.remove('skeleton')"
+            />
+          </div>
+        </div>
 
-      <button class="btn" @click="addToBag()">Add to Bag</button>
+        <button class="btn add-btn" @click="addToBag()">Add to Bag</button>
+      </div>
     </div>
+
+    <!-- Floating Contact -->
+    <a href="#contact" class="btn-icon contact-icon-floating">
+      <img src="images/contact.png" alt="Contact"/>
+    </a>
+
+    <footer class="site-footer">
+      Developed by
+      <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">
+        Zayeem Zaki
+      </a>
+    </footer>
   </div>
 
-  <footer class="site-footer">
-    Developed by <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">Zayeem Zaki</a>
-  </footer>
-
+  <!-- Vue + script -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="js/product.js"></script>
 </body>

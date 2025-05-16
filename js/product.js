@@ -9,7 +9,11 @@ const productApp = Vue.createApp({
   computed: {
     images() {
       return this.selectedVariant ? this.selectedVariant.images : [];
+    },
+    cartCount() {
+      return this.cart.reduce((sum,i) => sum + i.quantity, 0);
     }
+
   },
   methods: {
     goBack() {

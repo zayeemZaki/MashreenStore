@@ -1,104 +1,102 @@
-/* --- Global & Layout --- */
+/* ==================================================
+   Global & Typography
+   --------------------------------------------------
+   - Poppins for body text, Playfair Display for headings
+   - Base box-sizing, resets, and background
+   ================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap');
+
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
+
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0 1.5rem;
-  background: #f8f8f8;
-}
-#app {
-  flex: 1 0 auto;
-  width: 100%;
-  padding: 1rem 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
 }
 
-/* --- Header --- */
-.site-header {
+h1, h2, .teaser-title, .detail-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ==================================================
+   Header (index & product)
+   ================================================== */
+.site-header,
+.product-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   background: #ffe4ec;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Left side: logo, categories, search */
+/* Left side: logo + (index only) categories + search */
 .header-left {
   display: flex;
   align-items: center;
   gap: 1.25rem;
 }
-
 .logo {
   width: 200px;
   height: auto;
 }
 
-/* Categories button */
+/* Categories dropdown button (index.html only) */
 .btn-category {
-  background-color: #f7f2f3;   /* soft pink */
-  border-color: #f3c0c9;
-  color: #eb4c4c;
+  background: #fff;
+  color: #d63384;
   border: 2px solid #d63384;
   border-radius: 24px;
   padding: 0.5rem 1.2rem;
-  font-size: 1rem;
-  font-weight: 500;
   cursor: pointer;
-  transition: background 0.25s, color 0.25s;
+  transition: all .2s;
+  font-size: 1rem;
 }
-
-/* Make the Categories button turn pink on hover */
 .btn-category:hover {
-  background-color: #ffccd5;   /* soft pink */
+  background: #ffccd5;
   border-color: #ffccd5;
   color: #fff;
 }
-
-/* Make each dropdown item turn pink on hover */
-.dropdown-menu li:hover {
-  background-color: #ffccd5;
-  color: #d63384;              /* contrast text */
-}
-
-
-/* Dropdown menu */
 .categories-dropdown {
   position: relative;
 }
 .dropdown-menu {
   position: absolute;
-  top: 110%;
+  top: 100%;
+  margin-top: 4px;
   left: 0;
+  width: 160px;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 0.5rem 0;
   list-style: none;
-  margin: 0;
-  width: 160px;
-  z-index: 200;
+  padding: 0.5rem 0;
 }
 .dropdown-menu li {
   padding: 0.5rem 1rem;
   cursor: pointer;
-  transition: background 0.2s;
 }
 .dropdown-menu li:hover {
-  background: #f0f0f0;
+  background: #ffccd5;
+  color: #d63384;
 }
 
 /* Search input */
@@ -107,9 +105,8 @@ body {
   padding: 0.6rem 1rem;
   border: 2px solid #ccc;
   border-radius: 24px;
-  font-size: 1rem;
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-  transition: border-color 0.25s;
+  transition: border-color .25s;
 }
 .header-search:focus {
   outline: none;
@@ -121,49 +118,49 @@ body {
   display: flex;
   align-items: center;
 }
-
 .btn-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   background: #fff;
   border: 2px solid #d63384;
   border-radius: 50%;
-  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  cursor: pointer;
+  transition: background .2s;
   margin-left: 1rem;
-  transition: background 0.25s;
 }
 .btn-icon:hover {
   background: #f8d7e0;
 }
-
-/* Larger bag icon */
+/* —————————————————————
+   Tweak bag‐icon size
+   ————————————————————— */
 .bag-icon {
-  width: 60px;
-  height: 60px;
-  border: none;
-}
-.bag-icon img {
-  width: 32px;
-  height: 32px;
-}
-.bag-icon .badge {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  background: #d63384;
-  color: #fff;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  font-size: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 48px !important;
+  height: 48px !important;
 }
 
-/* Floating Contact Icon */
+.bag-icon img {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+/* Re-position the badge on the smaller circle */
+.bag-icon .badge {
+  top: -6px;    /* slightly up */
+  right: -6px;  /* slightly right */
+  min-width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+}
+
+
+/* ==================================================
+   Floating Contact Icon
+   ================================================== */
 .contact-icon-floating {
   position: fixed;
   bottom: 20px;
@@ -185,127 +182,279 @@ body {
   height: 30px;
 }
 
-/* Accessibility text */
-.visually-hidden {
-  position: absolute;
-  width: 1px; height: 1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
+/* ==================================================
+   Sticky Filter Nav (index.html category/trending pages)
+   ================================================== */
+.filter-nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  overflow-x: auto;
+  background: #fff;
+  position: sticky;
+  top: 72px;
+  z-index: 90;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.filter-chip {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
   white-space: nowrap;
+  transition: all .2s;
+}
+.filter-chip.active,
+.filter-chip:hover {
+  background: #d63384;
+  border-color: #d63384;
+  color: #fff;
 }
 
-/* --- Teasers & Grid --- */
+/* ==================================================
+   Teaser Sections (Homepage)
+   ================================================== */
 .teaser-section {
-  margin: 2rem 0;
+  padding: 2rem 0;
+  position: relative;
+}
+.bg-light   { background: #fff; }
+.bg-pale    { background: #fdf4f8; }
+.bg-mint    { background: #e8fdf4; }
+.bg-lavender{ background: #f5e8fd; }
+/* subtle pattern overlay */
+.teaser-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../images/pattern.svg') center center/200px no-repeat;
+  opacity: 0.05;
+  pointer-events: none;
 }
 
 .teaser-header {
+  margin-bottom: 0.75rem;
+}
+.title-with-icon {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
+  gap: 0.75rem;
 }
-
-.teaser-title {
-  font-size: 1.25rem;
-  color: #333;
-}
-
-.see-more.btn {
-  background: #fff;
-  color: #333;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.see-more.btn:hover {
-  background: #f0f0f0;
+.category-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  /* tint black → pink via filter (or use inline fill="currentColor") */
+  filter: invert(30%) sepia(29%) saturate(3451%) hue-rotate(312deg)
+          brightness(93%) contrast(101%);
 }
 
 .teaser-row {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
   padding-bottom: 0.5rem;
 }
-
 .teaser-card {
-  min-width: 120px;
-  cursor: pointer;
+  min-width: 220px;
   flex-shrink: 0;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform .2s;
+  position: relative;
 }
-
+/* skeleton placeholder */
+.skeleton { background: #e0e0e0; }
 .teaser-card img {
   width: 100%;
-  height: 100px;
+  height: 220px;
   object-fit: cover;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.teaser-card:not(.skeleton) img {
+  opacity: 1;
+}
+.teaser-card:hover {
+  transform: scale(1.05);
 }
 
-/* Product Grid */
+/* ==================================================
+   Product Grid (index.html filtered pages)
+   ================================================== */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
   gap: 1rem;
   margin: 2rem 0;
 }
-
 .product-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   background: #fff;
-  border: 1px solid #ddd;
+  padding: 1rem;
+  transition: transform .2s;
+  position: relative;
+}
+.product-card.skeleton { background: #e0e0e0; }
+.product-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
   border-radius: 8px;
-  padding: 0.75rem;
-  text-align: center;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.product-card:not(.skeleton) .product-image {
+  opacity: 1;
 }
 .product-card:hover {
   transform: translateY(-4px);
 }
-
-.product-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
 .product-card h3 {
-  font-size: 1.1rem;
   margin: 0.75rem 0 0.5rem;
-  color: #333;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', serif;
 }
-
 .price {
-  font-weight: bold;
-  margin: 0 0 0.75rem;
   color: #d63384;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
 }
-
 .product-card button {
   background: #d63384;
   color: #fff;
   border: none;
+  border-radius: 20px;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  transition: background 0.2s;
+  transition: background .2s;
 }
 .product-card button:hover {
   background: #c12e72;
 }
 
-/* --- Footer --- */
+/* ==================================================
+   Product Detail Page
+   ================================================== */
+.product-detail {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.loading-text {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  padding: 2rem 0;
+}
+
+/* Grid layout: info on left, gallery on right */
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.detail-title {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.description {
+  grid-column: 1 / -1;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Variant pills */
+.variants {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.variant-btn {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.variant-btn.active,
+.variant-btn:hover {
+  background: #d63384;
+  border-color: #d63384;
+  color: #fff;
+}
+
+/* Scroll-snap gallery */
+.gallery {
+  grid-row: span 2;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+.gallery-card {
+  min-width: 300px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #e0e0e0;
+  position: relative;
+}
+.gallery-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.gallery-card:not(.skeleton) img {
+  opacity: 1;
+}
+
+/* Add to Bag button */
+.add-btn {
+  grid-column: 1 / -1;
+  background: #d63384;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  justify-self: start;
+}
+.add-btn:hover {
+  background: #c12e72;
+}
+
+/* ==================================================
+   Footer
+   ================================================== */
 .site-footer {
   text-align: center;
   padding: 1rem 0;
   background: #fff;
   border-top: 1px solid #eee;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
 }
 .site-footer a {
@@ -316,8 +465,61 @@ body {
   text-decoration: underline;
 }
 
-/* --- Responsive --- */
-@media (max-width: 600px) {
+/* ==================================================
+   Responsive
+   ================================================== */
+@media (max-width: 768px) {
   .header-search { display: none; }
-  .site-header { flex-wrap: wrap; gap: 0.5rem; }
+  .site-header, .filter-nav { flex-wrap: wrap; gap: 0.5rem; }
+  .teaser-card { min-width: 160px; }
+  .teaser-card img { height: 160px; }
+
+  .detail-container { display: block; }
+  .gallery-card { min-width: 240px; }
+  .gallery-card img { height: 260px; }
+}
+
+
+/* Allow the bag icon to overflow its container (no clipping) */
+.site-header,
+.product-header {
+  overflow: visible;
+}
+
+/* Tweak bag‐icon size and border width for balance */
+.bag-icon {
+  width: 48px;               /* overall size */
+  height: 48px;
+  border: 4px solid #d63384; /* thinner border */
+  padding: 0;                /* remove extra padding */
+  overflow: visible;         /* show the badge fully */
+}
+
+/* Icon inside bag */
+.bag-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Badge styling: smaller dot with number, positioned neatly */
+.bag-icon .badge {
+  position: absolute;
+  top: -6px;        /* pull it up */
+  right: -6px;      /* pull it right */
+  min-width: 18px;
+  height: 18px;
+  background: #d63384;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  padding: 0 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Optional: smooth hover highlight */
+.bag-icon:hover {
+  background: #ffdee6;
 }
