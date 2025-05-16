@@ -719,3 +719,137 @@ a { text-decoration: none; color: inherit; }
 .contact-icon-floating {
   bottom: 1.5rem;
 }
+
+
+
+/* ==================================================
+   Checkout Page — Two-Column Card Layout
+   ================================================== */
+
+.checkout-header {
+  background: #ffeef4;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #f2d6e5;
+}
+.checkout-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #d81b60;
+  margin: 0;
+}
+
+.checkout-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Form Card */
+.checkout-form-card {
+  flex: 1 1 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 2rem;
+}
+.checkout-form-card h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.checkout-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+}
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.25rem;
+  transition: border-color .2s;
+}
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  outline: none;
+  border-color: #d81b60;
+}
+.checkout-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Payment Card */
+.checkout-payment-card {
+  flex: 1 1 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.checkout-payment-card h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.summary-total {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+.qr-code-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#qrcode img,
+#qrcode canvas {
+  width: 200px;
+  height: 200px;
+}
+.scan-text {
+  font-family: 'Poppins', sans-serif;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #d81b60;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.submit-btn:hover {
+  background: #c2185b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout-section {
+    flex-direction: column;
+  }
+  .checkout-form-card,
+  .checkout-payment-card {
+    width: 100%;
+  }
+}

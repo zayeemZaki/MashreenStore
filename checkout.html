@@ -4,59 +4,74 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mashreen’s Shop – Checkout</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="header-left">
-      <a href="index.html" class="brand">Mashreen’s Shop</a>
-    </div>
-    <div class="header-right">
-      <a href="#contact" class="btn">Contact</a>
-    </div>
-  </header>
-
-  <!-- Checkout App -->
   <div id="app">
-    <nav>
-      <h2 class="checkout-title">Checkout</h2>
-    </nav>
+    <!-- Header -->
+    <header class="site-header checkout-header">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Mashreen’s Shop Logo" class="logo"/>
+      </a>
+      <h1>Checkout</h1>
+    </header>
 
-    <form @submit.prevent="submitOrder" class="checkout-form">
-      <label>
-        Name:
-        <input v-model="customer.name" type="text" required/>
-      </label>
-      <label>
-        Email:
-        <input v-model="customer.email" type="email" required/>
-      </label>
-      <label>
-        Address:
-        <textarea v-model="customer.address" required></textarea>
-      </label>
-      <label>
-        Phone Number:
-        <input v-model="customer.phone" type="tel" required/>
-      </label>
-
-      <div class="total-section">
-        <p><strong>Total: ₹{{ total }}</strong></p>
-        <div id="qrcode"></div>
-        <p>Scan this QR code to pay via the payment app.</p>
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+      <!-- Customer Details Form Card -->
+      <div class="checkout-form-card">
+        <h2>Your Details</h2>
+        <form @submit.prevent="submitOrder" class="checkout-form">
+          <label>
+            Name
+            <input v-model="customer.name" type="text" required placeholder="Full Name"/>
+          </label>
+          <label>
+            Email
+            <input v-model="customer.email" type="email" required placeholder="you@example.com"/>
+          </label>
+          <label>
+            Address
+            <textarea v-model="customer.address" required placeholder="Shipping Address"></textarea>
+          </label>
+          <label>
+            Phone Number
+            <input v-model="customer.phone" type="tel" required placeholder="+91 98765 43210"/>
+          </label>
+        </form>
       </div>
 
-      <button type="submit" class="btn">Submit Order</button>
-    </form>
+      <!-- Payment Summary & QR Card -->
+      <div class="checkout-payment-card">
+        <h2>Order Summary</h2>
+        <p class="summary-total">Total: <strong>₹{{ total }}</strong></p>
+        <div class="qr-code-container">
+          <div id="qrcode"></div>
+          <p class="scan-text">Scan this QR code to pay via UPI</p>
+        </div>
+        <button class="btn submit-btn" @click="submitOrder">
+          Confirm & Pay
+        </button>
+      </div>
+    </section>
   </div>
 
   <!-- Footer -->
   <footer class="site-footer">
-    Developed by <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">Zayeem Zaki</a>
+    Developed by
+    <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">
+      Zayeem Zaki
+    </a>
   </footer>
 
-  <!-- Vue, QRCode.js & checkout.js -->
+  <!-- Vue + QRCode + checkout.js -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="js/checkout.js"></script>
