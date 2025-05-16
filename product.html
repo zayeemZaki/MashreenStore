@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Product Details – Mashreen’s Shop</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .product-detail { max-width: 800px; margin: 2rem auto; }
+    .detail-images { display: flex; gap: 1rem; overflow-x: auto; margin-bottom: 1rem; }
+    .detail-images img { width: 200px; object-fit: cover; border: 1px solid #ddd; border-radius: 4px; }
+    .detail-info { padding: 1rem; background: #fff; border: 1px solid #ddd; border-radius: 4px; }
+    .detail-info h1 { margin-top: 0; }
+    .back-btn { margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <a href="index.html" class="brand">Mashreen’s Shop</a>
+    </div>
+    <div class="header-right">
+      <a href="bag.html" class="btn">Bag</a>
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+  </header>
+
+  <div id="app" class="product-detail">
+    <button class="btn back-btn" @click="goBack()">← Back</button>
+
+    <div v-if="!product">
+      <p>Loading product…</p>
+    </div>
+    <div v-else>
+      <div class="detail-images">
+        <img v-for="img in product.images" :key="img" :src="img" :alt="product.name"/>
+      </div>
+      <div class="detail-info">
+        <h1>{{ product.name }}</h1>
+        <p class="price"><strong>₹{{ product.price }}</strong></p>
+        <p>{{ product.description }}</p>
+        <button class="btn" @click="addToBag()">Add to Bag</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    Developed by <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">Zayeem Zaki</a>
+  </footer>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

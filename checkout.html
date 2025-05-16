@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mashreen’s Shop – Checkout</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-left">
+      <a href="index.html" class="brand">Mashreen’s Shop</a>
+    </div>
+    <div class="header-right">
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+  </header>
+
+  <!-- Checkout App -->
+  <div id="app">
+    <nav>
+      <h2 class="checkout-title">Checkout</h2>
+    </nav>
+
+    <form @submit.prevent="submitOrder" class="checkout-form">
+      <label>
+        Name:
+        <input v-model="customer.name" type="text" required/>
+      </label>
+      <label>
+        Email:
+        <input v-model="customer.email" type="email" required/>
+      </label>
+      <label>
+        Address:
+        <textarea v-model="customer.address" required></textarea>
+      </label>
+      <label>
+        Phone Number:
+        <input v-model="customer.phone" type="tel" required/>
+      </label>
+
+      <div class="total-section">
+        <p><strong>Total: ₹{{ total }}</strong></p>
+        <div id="qrcode"></div>
+        <p>Scan this QR code to pay via the payment app.</p>
+      </div>
+
+      <button type="submit" class="btn">Submit Order</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    Developed by <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">Zayeem Zaki</a>
+  </footer>
+
+  <!-- Vue, QRCode.js & checkout.js -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

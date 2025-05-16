@@ -1,0 +1,268 @@
+/* --- Global & Layout --- */
+/* Ensure padding doesn’t break sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Page wrapper with horizontal padding */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 2rem;           /* 2rem left & right padding */
+  background: #f8f8f8;
+}
+
+/* Main app container fills available space */
+#app {
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 1rem 0;           /* vertical padding only */
+}
+
+/* --- Header --- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;           /* vertical padding */
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #333;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background: #f0f0f0;
+}
+
+.header-search {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* --- Dropdown --- */
+.categories-dropdown {
+  position: relative;
+  margin-right: 2rem;        /* extra space before search */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #f8f8f8;
+}
+
+/* --- Teaser Rows --- */
+.teaser-section {
+  margin: 2rem 0;
+}
+
+.teaser-title {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.teaser-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.teaser-card {
+  min-width: 120px;
+  cursor: pointer;
+}
+
+.teaser-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* --- Product Grid --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.price {
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+}
+
+.product-card button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.product-card button:hover {
+  background: #555;
+}
+
+/* --- Cart & Checkout --- */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.cart-table th {
+  background: #f0f0f0;
+}
+
+.cart-table td:nth-child(3),
+.cart-table th:nth-child(3),
+.cart-table td:nth-child(5),
+.cart-table th:nth-child(5) {
+  text-align: center;
+}
+
+.cart-table button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cart-table button:hover {
+  background: #555;
+}
+
+.total-section {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.empty-cart {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.empty-cart a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.empty-cart a:hover {
+  text-decoration: underline;
+}
+
+/* --- Footer --- */
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;           /* vertical padding */
+  background: #fff;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* Teaser header layout */
+.teaser-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.see-more {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  background: none;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.see-more:hover {
+  background: #f0f0f0;
+}

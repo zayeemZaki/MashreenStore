@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mashreen’s Shop – My Bag</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-left">
+      <a href="index.html" class="brand">Mashreen’s Shop</a>
+    </div>
+    <div class="header-right">
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+  </header>
+
+  <!-- Bag App -->
+  <div id="app">
+    <nav>
+      <h2 class="checkout-title">My Bag</h2>
+    </nav>
+
+    <!-- Empty Bag -->
+    <div v-if="cartItems.length === 0" class="empty-cart">
+      <p>Your bag is empty. <a href="index.html">Continue shopping</a>.</p>
+    </div>
+
+    <!-- Bag Contents -->
+    <div v-else>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th><th>Price</th><th>Qty</th><th>Subtotal</th><th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in cartItems" :key="item.id">
+            <td>{{ item.name }}</td>
+            <td>₹{{ item.price }}</td>
+            <td>
+              <button @click="decrement(item.id)">-</button>
+              {{ item.quantity }}
+              <button @click="increment(item.id)">+</button>
+            </td>
+            <td>₹{{ item.price * item.quantity }}</td>
+            <td><button @click="remove(item.id)">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="total-section">
+        <p><strong>Total: ₹{{ total }}</strong></p>
+        <button class="btn" @click="goToCheckout">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    Developed by <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">Zayeem Zaki</a>
+  </footer>
+
+  <!-- Vue & bag.js -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="js/bag.js"></script>
+</body>
+</html>

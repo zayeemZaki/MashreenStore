@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Mashreen’s Shop</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <div id="app">
+    <!-- Site Header -->
+    <header class="site-header">
+      <div class="header-left">
+        <a href="index.html" class="brand">Mashreen’s Shop</a>
+        <div class="categories-dropdown"
+             @mouseenter="showCatMenu = true"
+             @mouseleave="showCatMenu = false">
+          <button class="btn">Categories ▼</button>
+          <ul v-if="showCatMenu" class="dropdown-menu">
+            <li @click="goToCategoryPage('All')">All</li>
+            <li v-for="cat in categories" :key="cat" @click="goToCategoryPage(cat)">
+              {{ cat }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-right">
+        <input
+          type="search"
+          v-model="searchTerm"
+          placeholder="Search products…"
+          class="header-search"/>
+        <a href="bag.html" class="btn">Bag ({{ cartCount }})</a>
+        <a href="#contact" class="btn">Contact</a>
+      </div>
+    </header>
+
+    <!-- Homepage Teasers (only when not filtering) -->
+    <template v-if="!isFilterPage">
+      <section class="teaser-section" v-for="cat in ['Rings','Necklaces','Earrings']" :key="cat">
+        <div class="teaser-header">
+          <h2>{{ cat }}</h2>
+          <button class="see-more btn" @click="goToCategoryPage(cat)">See More</button>
+        </div>
+        <div class="teaser-row">
+          <a
+            v-for="p in products.filter(x=>x.category===cat).slice(0,5)"
+            :key="p.id"
+            :href="`product.html?id=${p.id}`"
+            class="teaser-card"
+          >
+            <img
+              :src="p.images ? p.images[0] : p.image"
+              :alt="p.name"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section class="teaser-section">
+        <div class="teaser-header">
+          <h2>Trending</h2>
+          <button class="see-more btn" @click="goToTrendingPage">See More</button>
+        </div>
+        <div class="teaser-row">
+          <a
+            v-for="p in trendingProducts"
+            :key="p.id"
+            :href="`product.html?id=${p.id}`"
+            class="teaser-card"
+          >
+            <img
+              :src="p.images ? p.images[0] : p.image"
+              :alt="p.name"
+            />
+          </a>
+        </div>
+
+        <div class="teaser-header">
+          <h2>Best Sellers</h2>
+          <button class="see-more btn" @click="goToCategoryPage('All?filter=bestSeller')">See More</button>
+        </div>
+        <div class="teaser-row">
+          <a
+            v-for="p in bestSellerProducts"
+            :key="p.id"
+            :href="`product.html?id=${p.id}`"
+            class="teaser-card"
+          >
+            <img
+              :src="p.images ? p.images[0] : p.image"
+              :alt="p.name"
+            />
+          </a>
+        </div>
+      </section>
+    </template>
+
+    <!-- Filtered Product Grid (only when filtering) -->
+    <div class="product-grid" v-if="isFilterPage">
+      <div
+        v-for="product in filteredProducts"
+        :key="product.id"
+        class="product-card"
+      >
+        <a :href="`product.html?id=${product.id}`">
+          <img
+            :src="product.images ? product.images[0] : product.image"
+            :alt="product.name"
+            class="product-image"
+          />
+          <h3>{{ product.name }}</h3>
+        </a>
+        <p class="price">₹{{ product.price }}</p>
+        <button @click="addToCart(product)" class="btn">Add to Bag</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    Developed by
+    <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">
+      Zayeem Zaki
+    </a>
+  </footer>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Elegant Gold Necklace",
+    "image": "images/necklace1.jpg",
+    "price": 150,
+    "category": "Necklaces",
+    "description": "An elegant gold-plated necklace with a delicate design.",
+    "trending": true,
+    "bestSeller": false
+  },
+  {
+    "id": 2,
+    "name": "Silver Heart Necklace",
+    "image": "images/necklace2.jpg",
+    "price": 120,
+    "category": "Necklaces",
+    "description": "A silver necklace featuring a heart-shaped pendant.",
+    "trending": false,
+    "bestSeller": true
+  },
+  {
+    "id": 3,
+    "name": "Pearl Strand Necklace",
+    "image": "images/necklace3.jpg",
+    "price": 200,
+    "category": "Necklaces",
+    "description": "A classic pearl strand necklace for an elegant look.",
+    "trending": false,
+    "bestSeller": false
+  },
+  {
+    "id": 4,
+    "name": "Diamond Cut Ring",
+    "image": "images/ring1.jpg",
+    "price": 300,
+    "category": "Rings",
+    "description": "A ring with a diamond-cut pattern that sparkles brilliantly.",
+    "trending": true,
+    "bestSeller": true
+  },
+  {
+    "id": 5,
+    "name": "Ruby Stone Ring",
+    "image": "images/ring2.jpg",
+    "price": 250,
+    "category": "Rings",
+    "description": "A ring adorned with a vibrant ruby gemstone.",
+    "trending": false,
+    "bestSeller": false
+  },
+  {
+    "id": 6,
+    "name": "Opal Gold Ring",
+    "image": "images/ring3.jpg",
+    "price": 180,
+    "category": "Rings",
+    "description": "A gold ring featuring a shimmering opal stone.",
+    "trending": false,
+    "bestSeller": false
+  },
+  {
+    "id": 7,
+    "name": "Charm Bracelet",
+    "image": "images/bracelet1.jpg",
+    "price": 75,
+    "category": "Bracelets",
+    "description": "A bracelet with multiple charms and a secure clasp.",
+    "trending": false,
+    "bestSeller": true
+  },
+  {
+    "id": 8,
+    "name": "Beaded Bracelet",
+    "image": "images/bracelet2.jpg",
+    "price": 60,
+    "category": "Bracelets",
+    "description": "A handcrafted bracelet made of colorful beads.",
+    "trending": true,
+    "bestSeller": false
+  }
+]
