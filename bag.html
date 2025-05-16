@@ -3,65 +3,63 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mashreen’s Shop – My Bag</title>
+  <title>My Bag – Mashreen’s Shop</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
   <!-- Header -->
-  <header class="site-header">
-    <div class="header-left">
-      <a href="index.html" class="brand">Mashreen’s Shop</a>
-    </div>
-    <div class="header-right">
-      <a href="#contact" class="btn">Contact</a>
-    </div>
+  <header class="site-header bag-header">
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.png" alt="Mashreen’s Shop Logo" class="logo"/>
+    </a>
+    <h1>My Bag</h1>
   </header>
 
   <!-- Bag App -->
-  <div id="app">
-    <nav>
-      <h2 class="checkout-title">My Bag</h2>
-    </nav>
-
-    <!-- Empty Bag -->
+  <div id="app" class="bag-container">
+    <!-- Empty State -->
     <div v-if="cartItems.length === 0" class="empty-cart">
-      <p>Your bag is empty. <a href="index.html">Continue shopping</a>.</p>
+      <p>Your bag is empty.</p>
+      <a href="index.html" class="btn continue-btn">Continue Shopping</a>
     </div>
 
-    <!-- Bag Contents -->
-    <div v-else>
-      <table class="cart-table">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Color</th>
-            <th>Price</th>
-            <th>Qty</th>
-            <th>Subtotal</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="item in cartItems" :key="item.id + item.color">
-            <td>{{ item.name }}</td>
-            <td>{{ item.color }}</td>
-            <td>₹{{ item.price }}</td>
-            <td>
-              <button @click="decrement(item.id, item.color)">-</button>
-              {{ item.quantity }}
-              <button @click="increment(item.id, item.color)">+</button>
-            </td>
-            <td>₹{{ item.price * item.quantity }}</td>
-            <td>
-              <button @click="remove(item.id, item.color)">Remove</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Cart Contents -->
+    <div v-else class="cart-list">
+      <div
+        class="cart-card"
+        v-for="item in cartItems"
+        :key="item.id + '-' + item.color"
+      >
+        <div class="card-image">
+          <img :src="getImage(item.id, item.color)" :alt="item.name"/>
+        </div>
+        <div class="card-info">
+          <h2 class="item-name">{{ item.name }}</h2>
+          <p class="item-color">Color: <strong>{{ item.color }}</strong></p>
+          <p class="item-price">₹{{ item.price }}</p>
+          <div class="quantity-control">
+            <button @click="decrement(item.id, item.color)">−</button>
+            <span>{{ item.quantity }}</span>
+            <button @click="increment(item.id, item.color)">+</button>
+          </div>
+          <p class="item-subtotal">Subtotal: ₹{{ item.price * item.quantity }}</p>
+          <button class="remove-btn" @click="remove(item.id, item.color)">
+            Remove
+          </button>
+        </div>
+      </div>
 
-      <div class="total-section">
-        <p><strong>Total: ₹{{ total }}</strong></p>
-        <button class="btn" @click="goToCheckout">Checkout</button>
+      <!-- Total & Checkout -->
+      <div class="bag-footer">
+        <p class="total-label">Total:</p>
+        <p class="total-amount">₹{{ total }}</p>
+        <button class="btn checkout-btn" @click="goToCheckout">
+          Proceed to Checkout
+        </button>
       </div>
     </div>
   </div>
@@ -74,7 +72,7 @@
     </a>
   </footer>
 
-  <!-- Vue & bag.js -->
+  <!-- Vue + bag.js -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="js/bag.js"></script>
 </body>
