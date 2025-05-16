@@ -33,20 +33,28 @@
       <table class="cart-table">
         <thead>
           <tr>
-            <th>Product</th><th>Price</th><th>Qty</th><th>Subtotal</th><th></th>
+            <th>Product</th>
+            <th>Color</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in cartItems" :key="item.id">
+          <tr v-for="item in cartItems" :key="item.id + item.color">
             <td>{{ item.name }}</td>
+            <td>{{ item.color }}</td>
             <td>₹{{ item.price }}</td>
             <td>
-              <button @click="decrement(item.id)">-</button>
+              <button @click="decrement(item.id, item.color)">-</button>
               {{ item.quantity }}
-              <button @click="increment(item.id)">+</button>
+              <button @click="increment(item.id, item.color)">+</button>
             </td>
             <td>₹{{ item.price * item.quantity }}</td>
-            <td><button @click="remove(item.id)">Remove</button></td>
+            <td>
+              <button @click="remove(item.id, item.color)">Remove</button>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -60,7 +68,10 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    Developed by <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">Zayeem Zaki</a>
+    Developed by
+    <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">
+      Zayeem Zaki
+    </a>
   </footer>
 
   <!-- Vue & bag.js -->
