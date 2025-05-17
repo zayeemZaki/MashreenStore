@@ -495,15 +495,13 @@
       }
     ]
   },
-
-
   {
     "id": 33,
-    "name": "Pretty Butterfly Earrings",
-    "price": 70,
-    "category": "Earrings",
-    "description": "Butterfly charm earrings",
-    "trending": true,
+    "name": "Floral Harmony Necklace",
+    "price": 230,
+    "category": "Necklaces",
+    "description": "Delicate floral pendant on a fine 18k gold-plated chain.",
+    "trending": false,
     "bestSeller": true,
     "variants": [
       {
@@ -514,26 +512,26 @@
   },
   {
     "id": 34,
-    "name": "Full of Charms Necklace",
-    "price": 250,
-    "category": "Necklaces",
-    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "name": "Moonstone Droplet Earrings",
+    "price": 180,
+    "category": "Earrings",
+    "description": "Pearl and moonstone drops for a moonlit glow.",
     "trending": true,
     "bestSeller": false,
     "variants": [
       {
-        "color": "Gold",
+        "color": "Silver",
         "images": ["images/34.JPG"]
       }
     ]
   },
   {
     "id": 35,
-    "name": "Statement Cube Earrings",
-    "price": 70,
-    "category": "Earrings",
-    "description": "Cube earrings",
-    "trending": true,
+    "name": "Classic Cuff Bracelet",
+    "price": 190,
+    "category": "Bracelets",
+    "description": "Smooth 18k gold-plated cuff—timeless and elegant.",
+    "trending": false,
     "bestSeller": true,
     "variants": [
       {
@@ -544,12 +542,12 @@
   },
   {
     "id": 36,
-    "name": "Gold Round Hoops",
-    "price": 70,
+    "name": "Petite Heart Studs",
+    "price": 140,
     "category": "Earrings",
-    "description": "Round hoops",
-    "trending": true,
-    "bestSeller": true,
+    "description": "Small heart-shaped studs, perfect for everyday wear.",
+    "trending": false,
+    "bestSeller": false,
     "variants": [
       {
         "color": "Gold",
@@ -559,11 +557,11 @@
   },
   {
     "id": 37,
-    "name": "Diamond Studded Nail Cartier",
-    "price": 290,
-    "category": "Bracelets",
-    "description": "An elegant silver plated bracelet with a delicate design.",
-    "trending": false,
+    "name": "Interlocking Circles Ring",
+    "price": 210,
+    "category": "Rings",
+    "description": "Two entwined circles, symbolizing unity and love.",
+    "trending": true,
     "bestSeller": true,
     "variants": [
       {
@@ -574,12 +572,12 @@
   },
   {
     "id": 38,
-    "name": "Angeline Bracelet",
-    "price": 200,
-    "category": "Bracelets",
-    "description": "An elegant 18k gold-plated bracelet with a delicate design.",
+    "name": "Lacy Filigree Necklace",
+    "price": 240,
+    "category": "Necklaces",
+    "description": "Intricate filigree design for a vintage feel.",
     "trending": false,
-    "bestSeller": true,
+    "bestSeller": false,
     "variants": [
       {
         "color": "Gold",
@@ -589,10 +587,10 @@
   },
   {
     "id": 39,
-    "name": "Luxe Green Emerald Necklace",
-    "price": 250,
+    "name": "Pearl Drop Pendant",
+    "price": 220,
     "category": "Necklaces",
-    "description": "An elegant 18k gold-plated necklace with a delicate design.",
+    "description": "Single pearl drop on a dainty chain.",
     "trending": true,
     "bestSeller": false,
     "variants": [
@@ -604,12 +602,12 @@
   },
   {
     "id": 40,
-    "name": "Bow-lý Combo Ring and Necklace",
-    "price": 390,
-    "category": "Necklaces",
-    "description": "An elegant 18k gold-plated necklace with a delicate design.",
-    "trending": true,
-    "bestSeller": false,
+    "name": "Eternal Knot Bracelet",
+    "price": 200,
+    "category": "Bracelets",
+    "description": "Knot motif symbolizing eternity and strength.",
+    "trending": false,
+    "bestSeller": true,
     "variants": [
       {
         "color": "Gold",
