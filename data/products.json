@@ -498,21 +498,6 @@
   },
   {
     "id": 33,
-    "name": "Floral Harmony Necklace",
-    "price": 230,
-    "category": "Necklaces",
-    "description": "Delicate floral pendant on a fine 18k gold-plated chain.",
-    "trending": false,
-    "bestSeller": true,
-    "variants": [
-      {
-        "color": "Gold",
-        "images": ["images/33.JPG"]
-      }
-    ]
-  },
-  {
-    "id": 34,
     "name": "Moonstone Droplet Earrings",
     "price": 180,
     "category": "Earrings",
@@ -522,10 +507,26 @@
     "variants": [
       {
         "color": "Silver",
+        "images": ["images/33.JPG"]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Floral Harmony Necklace",
+    "price": 230,
+    "category": "Necklaces",
+    "description": "Delicate floral pendant on a fine 18k gold-plated chain.",
+    "trending": false,
+    "bestSeller": true,
+    "variants": [
+      {
+        "color": "Gold",
         "images": ["images/34.JPG"]
       }
     ]
   },
+
   {
     "id": 35,
     "name": "Classic Cuff Bracelet",
