@@ -4,12 +4,15 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Checkout – Pinkaura</title>
+
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -18,28 +21,23 @@
     <h1>Checkout</h1>
   </header>
 
-  <!-- MOUNT POINT FOR VUE -->
+  <!-- VUE MOUNT POINT -->
   <div id="app">
-    <!-- MAIN SECTION: FORM + PAYMENT CARD -->
     <section class="checkout-section">
       <!-- Form Card -->
       <div class="checkout-form-card">
         <h2>Your Details</h2>
-        <form class="checkout-form" @submit.prevent="submitOrder">
-          <label>
-            Name
+        <form id="checkout-form" class="checkout-form" @submit.prevent="submitOrder">
+          <label>Name
             <input type="text" v-model="customer.name" placeholder="Full Name" required/>
           </label>
-          <label>
-            Email
+          <label>Email
             <input type="email" v-model="customer.email" placeholder="you@example.com" required/>
           </label>
-          <label>
-            Address
+          <label>Address
             <textarea v-model="customer.address" placeholder="Shipping Address" required></textarea>
           </label>
-          <label>
-            Phone Number
+          <label>Phone Number
             <input type="tel" v-model="customer.phone" placeholder="+91 98765 43210" required/>
           </label>
         </form>
@@ -48,35 +46,30 @@
       <!-- Payment Card -->
       <div class="checkout-payment-card">
         <h2>Order Summary</h2>
-        <!-- this will now actually render -->
-        <p class="summary-total">Total: ₹{{ total }}</p>
+        <p class="summary-total">Total: ₹{{ total.toFixed(2) }}</p>
 
         <div class="qr-code-container">
-          <img
-            src="images/paytm-qr.png"
-            alt="Paytm UPI QR Code"
-            class="static-qr"
-          />
+          <img src="images/paytm-qr.png" alt="Paytm UPI QR Code" class="static-qr"/>
           <p class="scan-text">Scan this QR code to pay via UPI</p>
         </div>
 
         <button class="submit-btn" @click="submitOrder">Confirm &amp; Pay</button>
       </div>
     </section>
-  </div><!-- end #app -->
+  </div>
 
   <!-- Floating Contact Button -->
   <a href="#contact" class="btn-icon contact-icon-floating">
     <img src="images/contact.png" alt="Contact"/>
   </a>
 
+  <!-- Footer -->
   <footer class="site-footer">
     Developed by
-    <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">
-      Zayeem Zaki
-    </a>
+    <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">Zayeem Zaki</a>
   </footer>
 
+  <!-- Vue + Checkout Logic -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="js/checkout.js"></script>
 </body>
