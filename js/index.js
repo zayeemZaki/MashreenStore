@@ -16,36 +16,25 @@ const app = Vue.createApp({
   computed: {
     filteredProducts() {
       let list = this.products;
-
-      // 1) filter by category
       if (this.selectedCategory !== "All") {
         list = list.filter(p => p.category === this.selectedCategory);
       }
-
-      // 2) optional trending filter
       if (this.trendingMode) {
         list = list.filter(p => p.trending);
       }
-
-      // 3) optional bestSeller filter
       if (this.bestSellerMode) {
         list = list.filter(p => p.bestSeller);
       }
-
-      // 4) search
       if (this.searchTerm.trim()) {
         const t = this.searchTerm.toLowerCase();
         list = list.filter(p => p.name.toLowerCase().includes(t));
       }
-
-      // 5) sort
       if (this.sortType === "priceAsc") {
-        list = [...list].sort((a,b) => a.price - b.price);
+        list = [...list].sort((a, b) => a.price - b.price);
       }
       if (this.sortType === "priceDesc") {
-        list = [...list].sort((a,b) => b.price - a.price);
+        list = [...list].sort((a, b) => b.price - a.price);
       }
-
       return list;
     },
     trendingProducts() {
@@ -55,30 +44,27 @@ const app = Vue.createApp({
       return this.products.filter(p => p.bestSeller);
     },
     cartCount() {
-      return this.cart.reduce((sum,i) => sum + i.quantity, 0);
+      return this.cart.reduce((sum, i) => sum + i.quantity, 0);
     }
   },
   methods: {
     addToCart(p) {
-      const ex = this.cart.find(x => x.id===p.id);
+      const ex = this.cart.find(x => x.id === p.id);
       if (ex) ex.quantity++;
-      else this.cart.push({id:p.id,quantity:1});
-      localStorage.setItem("cart",JSON.stringify(this.cart));
+      else this.cart.push({ id: p.id, quantity: 1 });
+      localStorage.setItem("cart", JSON.stringify(this.cart));
     },
-    // Navigate to a category (resets trending & best-seller)
     goToCategoryPage(cat) {
       const params = new URLSearchParams();
       if (cat && cat !== "All") params.set("category", cat);
       window.location.href = `index.html?${params.toString()}`;
     },
-    // Navigate to Trending within current category
     goToTrendingPage() {
       const params = new URLSearchParams();
       if (this.selectedCategory !== "All") params.set("category", this.selectedCategory);
       params.set("trending", "true");
       window.location.href = `index.html?${params.toString()}`;
     },
-    // Navigate to Best Sellers within current category
     goToBestSellerPage() {
       const params = new URLSearchParams();
       if (this.selectedCategory !== "All") params.set("category", this.selectedCategory);
@@ -88,22 +74,23 @@ const app = Vue.createApp({
     goToProduct(id) {
       window.location.href = `product.html?id=${id}`;
     },
-    sortByPriceAsc() { this.sortType = "priceAsc"; },
-    sortByPriceDesc() { this.sortType = "priceDesc"; }
+    sortByPriceAsc() {
+      this.sortType = "priceAsc";
+    },
+    sortByPriceDesc() {
+      this.sortType = "priceDesc";
+    }
   },
   mounted() {
-    // restore cart
     const c = localStorage.getItem("cart");
     if (c) this.cart = JSON.parse(c);
 
-    // fetch products & categories
     fetch("data/products.json")
       .then(r => r.json())
       .then(data => {
         this.products = data;
-        this.categories = Array.from(new Set(data.map(p=>p.category))).sort();
+        this.categories = Array.from(new Set(data.map(p => p.category))).sort();
 
-        // inspect URL params
         const p = new URLSearchParams(location.search);
         const cat = p.get("category");
         const trending = p.get("trending");

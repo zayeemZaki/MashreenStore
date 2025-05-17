@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <base href="/MashreenStore/">
 
   <title>Mashreen’s Shop</title>
@@ -17,15 +17,15 @@
 </head>
 <body>
   <div id="app">
-    <!-- Header -->
+    <!-- Site Header -->
     <header class="site-header">
       <div class="header-left">
         <a href="index.html" class="logo-link">
           <img src="images/logo.png" alt="Mashreen’s Shop Logo" class="logo"/>
         </a>
         <div class="categories-dropdown"
-            @mouseenter="showCatMenu = true"
-            @mouseleave="showCatMenu = false">
+             @mouseenter="showCatMenu = true"
+             @mouseleave="showCatMenu = false">
           <button class="btn btn-category">Categories</button>
           <ul v-if="showCatMenu"
               class="dropdown-menu"

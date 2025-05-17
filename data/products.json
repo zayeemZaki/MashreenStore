@@ -10,7 +10,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/1.jpg"]
+        "images": ["images/1.JPG"]
       }
     ]
   },
@@ -25,7 +25,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/2.jpg"]
+        "images": ["images/2.JPG"]
       }
     ]
   },
@@ -40,7 +40,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/3.jpg"]
+        "images": ["images/3.JPG"]
       }
     ]
   },
@@ -55,7 +55,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/4.jpg"]
+        "images": ["images/4.JPG"]
       }
     ]
   },
@@ -70,7 +70,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/5.jpg"]
+        "images": ["images/5.JPG"]
       }
     ]
   },
@@ -85,7 +85,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/6.jpg"]
+        "images": ["images/6.JPG"]
       }
     ]
   },
@@ -100,7 +100,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/7.jpg"]
+        "images": ["images/7.JPG"]
       }
     ]
   },
@@ -115,7 +115,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/8.jpg"]
+        "images": ["images/8.JPG"]
       }
     ]
   },
@@ -130,11 +130,11 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/9a.jpg"]
+        "images": ["images/9a.JPG"]
       },
       {
         "color": "Silver",
-        "images": ["/MashreenStore/images/9b.jpg"]
+        "images": ["images/9b.JPG"]
       }
     ]
   },
@@ -149,7 +149,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/10.jpg"]
+        "images": ["images/10.JPG"]
       }
     ]
   },
@@ -164,7 +164,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/11.jpg"]
+        "images": ["images/11.JPG"]
       }
     ]
   },
@@ -179,7 +179,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/12.jpg"]
+        "images": ["images/12.JPG"]
       }
     ]
   },
@@ -194,7 +194,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/13.jpg"]
+        "images": ["images/13.JPG"]
       }
     ]
   },
@@ -209,7 +209,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/14.jpg"]
+        "images": ["images/14.JPG"]
       }
     ]
   },
@@ -224,7 +224,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/15.jpg"]
+        "images": ["images/15.JPG"]
       }
     ]
   },
@@ -239,7 +239,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/16.jpg"]
+        "images": ["images/16.JPG"]
       }
     ]
   },
@@ -254,7 +254,7 @@
     "variants": [
       {
         "color": "Silver",
-        "images": ["/MashreenStore/images/17.jpg"]
+        "images": ["images/17.JPG"]
       }
     ]
   },
@@ -269,7 +269,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/18.jpg"]
+        "images": ["images/18.JPG"]
       }
     ]
   },
@@ -284,7 +284,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/19.jpg"]
+        "images": ["images/19.JPG"]
       }
     ]
   },
@@ -299,7 +299,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/20.jpg"]
+        "images": ["images/20.JPG"]
       }
     ]
   },
@@ -314,11 +314,11 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/21a.jpg"]
+        "images": ["images/21a.JPG"]
       },
       {
         "color": "Silver",
-        "images": ["/MashreenStore/images/21b.jpg"]
+        "images": ["images/21b.JPG"]
       }
     ]
   },
@@ -333,7 +333,7 @@
     "variants": [
       {
         "color": "Silver",
-        "images": ["/MashreenStore/images/22.jpg"]
+        "images": ["images/22.JPG"]
       }
     ]
   },
@@ -348,7 +348,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/23.jpg"]
+        "images": ["images/23.JPG"]
       }
     ]
   },
@@ -363,7 +363,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/24.jpg"]
+        "images": ["images/24.JPG"]
       }
     ]
   },
@@ -378,7 +378,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/25.jpg"]
+        "images": ["images/25.JPG"]
       }
     ]
   },
@@ -393,7 +393,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/26.jpg"]
+        "images": ["images/26.JPG"]
       }
     ]
   },
@@ -408,7 +408,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/27.jpg"]
+        "images": ["images/27.JPG"]
       }
     ]
   },
@@ -423,7 +423,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/28.jpg"]
+        "images": ["images/28.JPG"]
       }
     ]
   },
@@ -438,15 +438,15 @@
     "variants": [
       {
         "color": "Mauve",
-        "images": ["/MashreenStore/images/29.jpg"]
+        "images": ["images/29.JPG"]
       },
       {
         "color": "Secret",
-        "images": ["/MashreenStore/images/29.jpg"]
+        "images": ["images/29.JPG"]
       },
       {
         "color": "Lovie",
-        "images": ["/MashreenStore/images/29.jpg"]
+        "images": ["images/29.JPG"]
       }
     ]
   },
@@ -461,7 +461,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/30.jpg"]
+        "images": ["images/30.JPG"]
       }
     ]
   },
@@ -476,7 +476,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/31.jpg"]
+        "images": ["images/31.JPG"]
       }
     ]
   },
@@ -491,10 +491,12 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["/MashreenStore/images/32.jpg"]
+        "images": ["images/32.JPG"]
       }
     ]
   },
+
+
   {
     "id": 33,
     "name": "Pretty Butterfly Earrings",

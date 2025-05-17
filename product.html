@@ -6,19 +6,14 @@
   <base href="/MashreenStore/">
 
   <title>Product Details – Mashreen’s Shop</title>
-
-  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
     rel="stylesheet"
   />
-
-  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
   <div id="app">
-    <!-- HEADER -->
     <header class="site-header product-header">
       <a href="index.html" class="logo-link">
         <img src="images/logo.png" alt="Logo" class="logo"/>
@@ -29,38 +24,27 @@
       </a>
     </header>
 
-    <!-- LOADING STATE -->
     <div v-if="!product" class="loading-text">Loading…</div>
-
-    <!-- TWO-COLUMN DETAIL LAYOUT -->
     <div v-else class="product-detail detail--flex">
-      <!-- LEFT: IMAGE + COLOR PILLS -->
       <div class="left-panel">
         <div class="main-image skeleton">
-          <img
-            :src="selectedVariant.images[0]"
-            :alt="product.name"
-            @load="$event.target.parentNode.classList.remove('skeleton')"
-          />
+          <img :src="selectedVariant.images[0]" :alt="product.name" @load="$event.target.parentNode.classList.remove('skeleton')"/>
         </div>
         <div class="variants">
           <button
             v-for="v in product.variants"
             :key="v.color"
             class="variant-pill"
-            :class="{ active: selectedVariant === v }"
+            :class="{ active: selectedVariant===v }"
             :style="{
               backgroundColor: v.color.toLowerCase(),
-              color: v.color.toLowerCase()==='gold'? '#000':'#fff'
+              color: v.color.toLowerCase()==='gold'?'#000':'#fff'
             }"
             @click="selectVariant(v)"
-          >
-            {{ v.color }}
-          </button>
+          >{{ v.color }}</button>
         </div>
       </div>
 
-      <!-- RIGHT: DETAILS -->
       <div class="right-panel">
         <h1 class="detail-title">{{ product.name }}</h1>
         <p class="price">₹{{ product.price }}</p>
@@ -69,12 +53,6 @@
       </div>
     </div>
 
-    <!-- FLOATING CONTACT ICON -->
-    <a href="#contact" class="btn-icon contact-icon-floating">
-      <img src="images/contact.png" alt="Contact"/>
-    </a>
-
-    <!-- FOOTER -->
     <footer class="site-footer">
       Developed by
       <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">
@@ -83,7 +61,6 @@
     </footer>
   </div>
 
-  <!-- Vue + Script -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="js/product.js"></script>
 </body>

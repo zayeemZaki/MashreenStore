@@ -10,11 +10,9 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
     rel="stylesheet"
   />
-
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header bag-header">
     <a href="index.html" class="logo-link">
       <img src="images/logo.png" alt="Mashreen’s Shop Logo" class="logo"/>
@@ -22,15 +20,12 @@
     <h1>My Bag</h1>
   </header>
 
-  <!-- Bag App -->
   <div id="app" class="bag-container">
-    <!-- Empty State -->
     <div v-if="cartItems.length === 0" class="empty-cart">
       <p>Your bag is empty.</p>
       <a href="index.html" class="btn continue-btn">Continue Shopping</a>
     </div>
 
-    <!-- Cart Contents -->
     <div v-else class="cart-list">
       <div
         class="cart-card"
@@ -49,14 +44,15 @@
             <span>{{ item.quantity }}</span>
             <button @click="increment(item.id, item.color)">+</button>
           </div>
-          <p class="item-subtotal">Subtotal: ₹{{ item.price * item.quantity }}</p>
+          <p class="item-subtotal">
+            Subtotal: ₹{{ item.price * item.quantity }}
+          </p>
           <button class="remove-btn" @click="remove(item.id, item.color)">
             Remove
           </button>
         </div>
       </div>
 
-      <!-- Total & Checkout -->
       <div class="bag-footer">
         <p class="total-label">Total:</p>
         <p class="total-amount">₹{{ total }}</p>
@@ -67,7 +63,6 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="site-footer">
     Developed by
     <a href="https://www.linkedin.com/in/zayeemzaki45/" target="_blank">
@@ -75,7 +70,6 @@
     </a>
   </footer>
 
-  <!-- Vue + bag.js -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="js/bag.js"></script>
 </body>
