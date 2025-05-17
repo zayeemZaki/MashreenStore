@@ -10,7 +10,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/1.jpg"]
+        "images": ["/MashreenStore/images/1.jpg"]
       }
     ]
   },
@@ -25,7 +25,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/2.jpg"]
+        "images": ["/MashreenStore/images/2.jpg"]
       }
     ]
   },
@@ -55,7 +55,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/4.jpg"]
+        "images": ["/MashreenStore/images/4.jpg"]
       }
     ]
   },
@@ -70,7 +70,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/5.jpg"]
+        "images": ["/MashreenStore/images/5.jpg"]
       }
     ]
   },
@@ -85,7 +85,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/6.jpg"]
+        "images": ["/MashreenStore/images/6.jpg"]
       }
     ]
   },
@@ -100,7 +100,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/7.jpg"]
+        "images": ["/MashreenStore/images/7.jpg"]
       }
     ]
   },
@@ -115,7 +115,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/8.jpg"]
+        "images": ["/MashreenStore/images/8.jpg"]
       }
     ]
   },
@@ -130,11 +130,11 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/9a.jpg"]
+        "images": ["/MashreenStore/images/9a.jpg"]
       },
       {
         "color": "Silver",
-        "images": ["images/9b.jpg"]
+        "images": ["/MashreenStore/images/9b.jpg"]
       }
     ]
   },
@@ -149,7 +149,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/10.jpg"]
+        "images": ["/MashreenStore/images/10.jpg"]
       }
     ]
   },
@@ -164,7 +164,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/11.jpg"]
+        "images": ["/MashreenStore/images/11.jpg"]
       }
     ]
   },
@@ -179,7 +179,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/12.jpg"]
+        "images": ["/MashreenStore/images/12.jpg"]
       }
     ]
   },
@@ -194,7 +194,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/13.jpg"]
+        "images": ["/MashreenStore/images/13.jpg"]
       }
     ]
   },
@@ -209,7 +209,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/14.jpg"]
+        "images": ["/MashreenStore/images/14.jpg"]
       }
     ]
   },
@@ -224,7 +224,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/15.jpg"]
+        "images": ["/MashreenStore/images/15.jpg"]
       }
     ]
   },
@@ -239,7 +239,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/16.jpg"]
+        "images": ["/MashreenStore/images/16.jpg"]
       }
     ]
   },
@@ -254,7 +254,7 @@
     "variants": [
       {
         "color": "Silver",
-        "images": ["images/17.jpg"]
+        "images": ["/MashreenStore/images/17.jpg"]
       }
     ]
   },
@@ -269,7 +269,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/18.jpg"]
+        "images": ["/MashreenStore/images/18.jpg"]
       }
     ]
   },
@@ -284,7 +284,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/19.jpg"]
+        "images": ["/MashreenStore/images/19.jpg"]
       }
     ]
   },
@@ -299,7 +299,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/20.jpg"]
+        "images": ["/MashreenStore/images/20.jpg"]
       }
     ]
   },
@@ -314,11 +314,11 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/21a.jpg"]
+        "images": ["/MashreenStore/images/21a.jpg"]
       },
       {
         "color": "Silver",
-        "images": ["images/21b.jpg"]
+        "images": ["/MashreenStore/images/21b.jpg"]
       }
     ]
   },
@@ -333,7 +333,7 @@
     "variants": [
       {
         "color": "Silver",
-        "images": ["images/22.jpg"]
+        "images": ["/MashreenStore/images/22.jpg"]
       }
     ]
   },
@@ -348,7 +348,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/23.jpg"]
+        "images": ["/MashreenStore/images/23.jpg"]
       }
     ]
   },
@@ -363,7 +363,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/24.jpg"]
+        "images": ["/MashreenStore/images/24.jpg"]
       }
     ]
   },
@@ -378,7 +378,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/25.jpg"]
+        "images": ["/MashreenStore/images/25.jpg"]
       }
     ]
   },
@@ -393,7 +393,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/26.jpg"]
+        "images": ["/MashreenStore/images/26.jpg"]
       }
     ]
   },
@@ -408,7 +408,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/27.jpg"]
+        "images": ["/MashreenStore/images/27.jpg"]
       }
     ]
   },
@@ -423,7 +423,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/28.jpg"]
+        "images": ["/MashreenStore/images/28.jpg"]
       }
     ]
   },
@@ -438,15 +438,15 @@
     "variants": [
       {
         "color": "Mauve",
-        "images": ["images/29.jpg"]
+        "images": ["/MashreenStore/images/29.jpg"]
       },
       {
         "color": "Secret",
-        "images": ["images/29.jpg"]
+        "images": ["/MashreenStore/images/29.jpg"]
       },
       {
         "color": "Lovie",
-        "images": ["images/29.jpg"]
+        "images": ["/MashreenStore/images/29.jpg"]
       }
     ]
   },
@@ -461,7 +461,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/30.jpg"]
+        "images": ["/MashreenStore/images/30.jpg"]
       }
     ]
   },
@@ -476,7 +476,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/31.jpg"]
+        "images": ["/MashreenStore/images/31.jpg"]
       }
     ]
   },
@@ -491,7 +491,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/32.jpg"]
+        "images": ["/MashreenStore/images/32.jpg"]
       }
     ]
   },
@@ -506,7 +506,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/33.jpg"]
+        "images": ["/MashreenStore/images/33.jpg"]
       }
     ]
   },
@@ -521,7 +521,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/34.jpg"]
+        "images": ["/MashreenStore/images/34.jpg"]
       }
     ]
   },
@@ -536,7 +536,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/35.jpg"]
+        "images": ["/MashreenStore/images/35.jpg"]
       }
     ]
   },
@@ -551,7 +551,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/36.jpg"]
+        "images": ["/MashreenStore/images/36.jpg"]
       }
     ]
   },
@@ -566,7 +566,7 @@
     "variants": [
       {
         "color": "Silver",
-        "images": ["images/37.jpg"]
+        "images": ["/MashreenStore/images/37.jpg"]
       }
     ]
   },
@@ -581,7 +581,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/38.jpg"]
+        "images": ["/MashreenStore/images/38.jpg"]
       }
     ]
   },
@@ -596,7 +596,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/39.jpg"]
+        "images": ["/MashreenStore/images/39.jpg"]
       }
     ]
   },
@@ -611,7 +611,7 @@
     "variants": [
       {
         "color": "Gold",
-        "images": ["images/40.jpg"]
+        "images": ["/MashreenStore/images/40.jpg"]
       }
     ]
   }
