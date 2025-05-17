@@ -260,21 +260,6 @@
   },
   {
     "id": 18,
-    "name": "Goldie Luxe Ring",
-    "price": 200,
-    "category": "Rings",
-    "description": "18k gold plated ring (adjustable size)",
-    "trending": true,
-    "bestSeller": false,
-    "variants": [
-      {
-        "color": "Gold",
-        "images": ["images/19.JPG"]
-      }
-    ]
-  },
-  {
-    "id": 19,
     "name": "Plain Nail Cartier",
     "price": 200,
     "category": "Bracelets",
@@ -288,6 +273,22 @@
       }
     ]
   },
+  {
+    "id": 19,
+    "name": "Goldie Luxe Ring",
+    "price": 200,
+    "category": "Rings",
+    "description": "18k gold plated ring (adjustable size)",
+    "trending": true,
+    "bestSeller": false,
+    "variants": [
+      {
+        "color": "Gold",
+        "images": ["images/19.JPG"]
+      }
+    ]
+  },
+
   {
     "id": 20,
     "name": "Pearl Hoops",
